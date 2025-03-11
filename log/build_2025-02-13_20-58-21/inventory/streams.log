@@ -1,0 +1,38 @@
+[4.980s] Invoking command in '/home/faheem/IRobot/src/inventory': PYTHONPATH=/home/faheem/IRobot/build/inventory/prefix_override:/home/faheem/.local/lib/python3.10/site-packages/colcon_core/task/python/colcon_distutils_commands:/home/faheem/IRobot/install/inventory/lib/python3.10/site-packages:${PYTHONPATH} /usr/local/bin/python3 -W ignore:setup.py install is deprecated -W ignore:easy_install command is deprecated setup.py egg_info --egg-base ../../build/inventory build --build-base /home/faheem/IRobot/build/inventory/build install --record /home/faheem/IRobot/build/inventory/install.log --single-version-externally-managed install_data
+[5.600s] running egg_info
+[5.613s] writing ../../build/inventory/inventory.egg-info/PKG-INFO
+[5.613s] writing dependency_links to ../../build/inventory/inventory.egg-info/dependency_links.txt
+[5.614s] writing requirements to ../../build/inventory/inventory.egg-info/requires.txt
+[5.614s] writing top-level names to ../../build/inventory/inventory.egg-info/top_level.txt
+[5.614s] writing manifest file '../../build/inventory/inventory.egg-info/SOURCES.txt'
+[5.643s] reading manifest file '../../build/inventory/inventory.egg-info/SOURCES.txt'
+[5.644s] writing manifest file '../../build/inventory/inventory.egg-info/SOURCES.txt'
+[5.644s] running build
+[5.644s] running build_py
+[5.644s] copying inventory/capture.py -> /home/faheem/IRobot/build/inventory/build/lib/inventory
+[5.645s] copying inventory/c_navigate_to_pose.py -> /home/faheem/IRobot/build/inventory/build/lib/inventory
+[5.645s] copying inventory/__init__.py -> /home/faheem/IRobot/build/inventory/build/lib/inventory
+[5.645s] running install
+[5.650s] running install_lib
+[5.664s] copying /home/faheem/IRobot/build/inventory/build/lib/inventory/capture.py -> /home/faheem/IRobot/install/inventory/lib/python3.10/site-packages/inventory
+[5.664s] copying /home/faheem/IRobot/build/inventory/build/lib/inventory/c_navigate_to_pose.py -> /home/faheem/IRobot/install/inventory/lib/python3.10/site-packages/inventory
+[5.664s] copying /home/faheem/IRobot/build/inventory/build/lib/inventory/__init__.py -> /home/faheem/IRobot/install/inventory/lib/python3.10/site-packages/inventory
+[5.664s] byte-compiling /home/faheem/IRobot/install/inventory/lib/python3.10/site-packages/inventory/capture.py to capture.cpython-310.pyc
+[5.665s] byte-compiling /home/faheem/IRobot/install/inventory/lib/python3.10/site-packages/inventory/c_navigate_to_pose.py to c_navigate_to_pose.cpython-310.pyc
+[5.666s] byte-compiling /home/faheem/IRobot/install/inventory/lib/python3.10/site-packages/inventory/__init__.py to __init__.cpython-310.pyc
+[5.666s] running install_data
+[5.666s] copying resource/inventory -> /home/faheem/IRobot/install/inventory/share/ament_index/resource_index/packages
+[5.666s] copying package.xml -> /home/faheem/IRobot/install/inventory/share/inventory
+[5.667s] copying launch/manual_navigation.launch.py -> /home/faheem/IRobot/install/inventory/share/inventory/launch
+[5.667s] copying launch/view_map.launch.py -> /home/faheem/IRobot/install/inventory/share/inventory/launch
+[5.667s] copying launch/slamtoolbox_mapping.launch.py -> /home/faheem/IRobot/install/inventory/share/inventory/launch
+[5.667s] copying launch/cartographer_mapping.launch.py -> /home/faheem/IRobot/install/inventory/share/inventory/launch
+[5.667s] copying config/setup.py -> /home/faheem/IRobot/install/inventory/share/inventory/config
+[5.667s] copying config/wafflepi_parms.yaml -> /home/faheem/IRobot/install/inventory/share/inventory/config
+[5.667s] copying config/cartographer.lua -> /home/faheem/IRobot/install/inventory/share/inventory/config
+[5.667s] running install_egg_info
+[5.681s] removing '/home/faheem/IRobot/install/inventory/lib/python3.10/site-packages/inventory-0.0.0-py3.10.egg-info' (and everything under it)
+[5.682s] Copying ../../build/inventory/inventory.egg-info to /home/faheem/IRobot/install/inventory/lib/python3.10/site-packages/inventory-0.0.0-py3.10.egg-info
+[5.682s] running install_scripts
+[5.799s] writing list of installed files to '/home/faheem/IRobot/build/inventory/install.log'
+[5.827s] Invoked command in '/home/faheem/IRobot/src/inventory' returned '0': PYTHONPATH=/home/faheem/IRobot/build/inventory/prefix_override:/home/faheem/.local/lib/python3.10/site-packages/colcon_core/task/python/colcon_distutils_commands:/home/faheem/IRobot/install/inventory/lib/python3.10/site-packages:${PYTHONPATH} /usr/local/bin/python3 -W ignore:setup.py install is deprecated -W ignore:easy_install command is deprecated setup.py egg_info --egg-base ../../build/inventory build --build-base /home/faheem/IRobot/build/inventory/build install --record /home/faheem/IRobot/build/inventory/install.log --single-version-externally-managed install_data
