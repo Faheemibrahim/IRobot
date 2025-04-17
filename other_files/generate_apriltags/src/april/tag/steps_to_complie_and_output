@@ -1,0 +1,2 @@
+javac -d build/ $(find src -name "*.java")
+java -cp build/ april.tag.Generate36h11
