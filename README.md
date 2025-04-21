@@ -25,7 +25,7 @@ Built with the tools and technologies:
 ## 📑 Table of Contents
 
 - [Overview](#overview)
-- [📽️ Demo / How It Works](#demo--how-it-works)
+- [📽️ Demo / How It Works](#Demo--How-It-Works)
 - [Getting Started](#getting-started)
   - [Prerequisites](#prerequisites)
   - [Installation](#installation)
