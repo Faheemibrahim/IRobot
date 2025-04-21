@@ -1,23 +1,41 @@
-## IRobot **(Final Year Project)** 
-**Inventory Management with TurtleBot3 and ROS 2**  
-- **University:** Heriot-Watt University  
-- **Supervisor:** Dr. Nidhal Abdulaziz  
-- **Student:** Mohammed Ibrahim  
+# IROBOT
+
+*Empowering Robots for Seamless Inventory Management*
+
+![Last Commit](https://img.shields.io/github/last-commit/yourusername/yourrepo)  
+![Languages](https://img.shields.io/github/languages/count/yourusername/yourrepo)  
+![Top Language](https://img.shields.io/github/languages/top/yourusername/yourrepo)  
+
+Built with the tools and technologies:  
+![Zsh](https://img.shields.io/badge/-Zsh-orange) ![Bash](https://img.shields.io/badge/-GNU%20Bash-brightgreen) ![TurtleBot](https://img.shields.io/badge/-IRobot-lightgreen) ![XML](https://img.shields.io/badge/-XML-blue) ![Python](https://img.shields.io/badge/-Python-blue) ![Lua](https://img.shields.io/badge/-Lua-000080) ![YAML](https://img.shields.io/badge/-YAML-red)
 
 ---
 
-### Credits & Licensing
+## 📑 Table of Contents
 
-This project builds upon the work of several open-source communities and tools. Special thanks to the developers and maintainers of the following resources, which were instrumental to this project:
+- [Overview](#overview)
+- [Getting Started](#getting-started)
+  - [Prerequisites](#prerequisites)
+  - [Installation](#installation)
+  - [Usage](#usage)
+  - [Testing](#testing)
+- [Demo / How it Works](#demo--how-it-works)
+- [Technologies](#technologies)
+- [Folder Structure](#folder-structure)
+- [Future Work](#future-work)
+- [Acknowledgments](#acknowledgments)
 
-- **[ROBOTIS](https://www.robotis.com/)** – for TurtleBot3 hardware, software packages, and documentation  
-- **[ROS 2 Navigation Stack (Nav2)]([https://navigation.ros.org/](https://docs.nav2.org/))** – for autonomous navigation and path planning  
-- **[Open Robotics](https://www.openrobotics.org/)** – for their contributions to the ROS ecosystem  
-- **[Pupil Labs AprilTags](https://github.com/pupil-labs/apriltags)** – for the AprilTags library used in visual inventory tracking
-- **[Google Cartographer]([https://google-cartographer-ros.readthedocs.io/](https://ros2-industrial-workshop.readthedocs.io/en/latest/_source/navigation/ROS2-Cartographer.html))** – for real-time SLAM capabilities    
-- **[Taipy](https://www.taipy.io/)** – for providing workflow orchestration tools and documentation  
-- **Other open-source packages and documentation** referenced during development  
+---
 
-Your contributions have made this work possible — thank you!
+## 📽️ Demo / How It Works
 
-If you discover any external code, files, or assets in this repository that do not clearly indicate licensing information, please contact me at **mi200@hw.ac.uk**. I will ensure proper attribution or removal as necessary.
+Check out how the robot performs in real-world scenarios:
+
+- 🔹 [Test Case 1 – Basic Navigation and Shelf Scanning](https://your-link-to-test1)
+- 🔹 [Test Case 2 – Obstacle Avoidance and Inventory Update](https://your-link-to-test2)
+
+---
+
+## 📌 Overview
+
+_A brief explanation of your project here..._
