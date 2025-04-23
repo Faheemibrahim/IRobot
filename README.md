@@ -1,4 +1,4 @@
-# IROBOT
+/# IROBOT
 
 *Empowering Robots for Seamless Inventory Management in Small to Medium Warehouses*
 
@@ -40,8 +40,6 @@ Built with the tools and technologies:
 
 ## 📌 Overview
 
-<details>
-<summary>Click to expand</summary>
 
 **IROBOT** is an autonomous warehouse inventory management system developed as part of a final year project at Heriot-Watt University. Designed for small to medium-sized warehouse environments, the system uses a ROS 2-powered TurtleBot3 Waffle Pi to autonomously navigate, scan, and monitor inventory shelves.
 
@@ -51,7 +49,7 @@ The robot identifies items using AprilTags, detects missing or unknown items, an
 👨‍🏫 Supervisor: Dr. Nidhal Abdulaziz  
 👨‍💻 Student: Mohammed Ibrahim
 
-</details>
+
 
 ---
 
@@ -81,8 +79,6 @@ The robot identifies items using AprilTags, detects missing or unknown items, an
 
 ## Prerequisites
 
-<details>
-<summary>Click to expand</summary>
 
 | Component              | Specification                      |
 |------------------------|------------------------------------|
@@ -92,14 +88,12 @@ The robot identifies items using AprilTags, detects missing or unknown items, an
 | LiDAR                  | RPLIDAR C1 or compatible           |
 | Storage                | 64GB Class 10 microSD Card         |
 
-</details>
+
 
 ---
 
 ## Installation
 
-<details>
-<summary>Click to expand</summary>
 
 #### 📦 On Raspberry Pi (Robot Side)
 
@@ -108,7 +102,7 @@ The robot identifies items using AprilTags, detects missing or unknown items, an
    - Select **Ubuntu 22.04 Server** and enable SSH in advanced options.
 
 2. **Install ROS 2 Humble (Minimal)**  
-   - Follow the [ROS 2 Humble Installation Guide](https://docs.ros.org/en/humble/Installation/Ubuntu-Install-Debians.html)
+ - Follow the [ROS 2 Humble Installation Guide](https://docs.ros.org/en/humble/Installation/Ubuntu-Install-Debians.html)
      
    ```bash
    sudo apt update && sudo apt upgrade -y
@@ -125,8 +119,8 @@ The robot identifies items using AprilTags, detects missing or unknown items, an
    ```
 
 5. **Clone Required Packages**
-   - RPLIDAR: [ros2 branch](https://github.com/Slamtec/rplidar_ros/tree/ros2)
-   - TurtleBot3: [humble branch](https://github.com/ROBOTIS-GIT/turtlebot3/tree/humble)
+ - RPLIDAR: [ros2 branch](https://github.com/Slamtec/rplidar_ros/tree/ros2)
+ - TurtleBot3: [humble branch](https://github.com/ROBOTIS-GIT/turtlebot3/tree/humble)
    
    ```bash
    cd ~/ros2_ws/src
@@ -163,12 +157,19 @@ The robot identifies items using AprilTags, detects missing or unknown items, an
 
 5. **Clone Required Packages**
    
-   - TurtleBot3: [humble branch](https://github.com/ROBOTIS-GIT/turtlebot3/tree/humble)
-   - IRobot: [main branch](https://github.com/Faheemibrahim/IRobot.git)
+- TurtleBot3: [humble branch](https://github.com/ROBOTIS-GIT/turtlebot3/tree/humble)
+- IRobot: [main branch](https://github.com/Faheemibrahim/IRobot.git)
+
+  ```bash
+   cd ~/ros2_ws/src
+   git clone -b ros2 --https://github.com/ROBOTIS-GIT/turtlebot3/tree/humble
+   git clone -b humble --https://github.com/Faheemibrahim/IRobot.git
+   ```
 
 7. **Packages to install**
 
    Install Navigation2 (Nav2)
+   
    ```bash
    sudo apt install ros-humble-navigation2
    sudo apt install ros-humble-nav2-bringup
@@ -180,17 +181,17 @@ The robot identifies items using AprilTags, detects missing or unknown items, an
    sudo apt install -y ros-humble-cv-bridge ros-humble-image-transport
    ```
 
- 8. **Build and Source**
+ 9. **Build and Source**
     
      ```bash
      colcon build
      source install/setup.bash
      ```
 
- 9. Conda Environment Setup
+ 10. Conda Environment Setup
 
-    Create a Python environment for AprilTag detection and image processing:
-  
+  - Create a Python environment for AprilTag detection and image processing:
+
     ```bash
     conda create -n irobot_env python=3.10
     conda activate irobot_env
@@ -199,13 +200,12 @@ The robot identifies items using AprilTags, detects missing or unknown items, an
 
 > **Note:** This is used by perception subprocess script
 
-</details>
 
 ---
 
 ## Usage
 
-<details>
+
 <summary>Click to expand</summary>
 1. **Modify Robot Files**
 ssh into the pi 
@@ -214,7 +214,6 @@ ssh into the pi
 
 
 
-</details>
 
 ---
 
