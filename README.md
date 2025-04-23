@@ -1,4 +1,4 @@
-![Intro](other_files/IROBOT_Images/intro.jpeg)
+![Intro](other_files/IROBOT_Images/intro.png)
 
 # IROBOT
 
