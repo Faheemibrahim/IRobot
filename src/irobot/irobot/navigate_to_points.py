@@ -81,7 +81,7 @@ def main():
             
             
             
-            ########## code should work here ################
+            ########## code will work here ################
             
             
             
@@ -94,7 +94,7 @@ def main():
 
     print("Navigation completed.")
     
-    ############# i want missing items to only be updated in the end ################
+    ############# missing items to only be updated in the end ################
     
     
     rclpy.shutdown()
