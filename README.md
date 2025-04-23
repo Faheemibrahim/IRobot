@@ -205,10 +205,25 @@ The robot identifies items using AprilTags, detects missing or unknown items, an
 
 ## Usage
 
-
-<summary>Click to expand</summary>
 1. **Modify Robot Files**
-ssh into the pi 
+
+   ```bash
+    cd ~/ros2_ws/src
+    ros2 pkg create --build-type ament_python camera_pub --dependencies rclpy sensor_msgs
+    cd camera_pub/camera_pub
+    touch camera_pub.py
+    chmod +x camera_pub.py
+    ```
+ - after creating the camera_pub.py file copy the contnets from this repo modified files/camera_pub.py into the camera_pub.py in 
+ ~/ros2_ws/src/camera_pub/camera_pub
+ - edit the bringupfile in ~/ros2_ws/src/turtlebot3/turtlebot3_bringup/launch after that replace the robot.py file with the file contnets from this repo   
+ modified files/camera_pub.py  
+ - build and source and check if the camera node works as intended
+
+2. **Mapping**
+ - open cartographer.launch.py on one terminal 
+ - open ros2 run turtlebot3_teleop twist_keyboard in another terminal
+ - you should be able to see  
 
 
 
@@ -216,4 +231,3 @@ ssh into the pi
 
 
 ---
-
