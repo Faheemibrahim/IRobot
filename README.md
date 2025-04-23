@@ -122,13 +122,44 @@ The robot identifies items using AprilTags, detects missing or unknown items, an
    git clone -b ros2 --single-branch https://github.com/Slamtec/rplidar_ros.git
    git clone -b humble --single-branch https://github.com/ROBOTIS-GIT/turtlebot3.git
    ```
+6. **Create and Configure the camera_pub Package**
+ - ssh into the Pi
+    
+   ```bash
+    cd ~/ros2_ws/src
+    ros2 pkg create --build-type ament_python camera_pub --dependencies rclpy sensor_msgs
+    cd camera_pub/camera_pub
+    touch camera_pub.py
+    chmod +x camera_pub.py
+    ```
+ - Open the newly created camera_pub.py located at:
 
- 6. **Build and Source**
+   ```bash
+     nano ~/ros2_ws/src/turtlebot3/turtlebot3_bringup/launch
+    ```
+  - Edit the appropriate launch file (robot.launch.py) to include your camera_pub node.
+  - Replace the robot.py with the contents of modified_files/robot.py from this repository.
+  - Add the node in the setup_file.py
+    
+7. **Modify the TurtleBot3 Bringup Launch**
+
+ - Open the launch directory:
+   
+   ```bash
+     nano ~/ros2_ws/src/camera_pub/camera_pub/camera_pub.py
+    ```
+   
+ 8. **Build and Source**
     
       ```bash
       cd ~/ros2_ws
       colcon build
       source install/setup.bash
+      ```
+ 9. **Check Camera Node***
+     
+      ```bash
+      ros2 run irobot camera_pub camera_pub 
       ```
 ---
 
@@ -179,6 +210,7 @@ The robot identifies items using AprilTags, detects missing or unknown items, an
  9. **Build and Source**
     
      ```bash
+     cd ~/irobot
      colcon build
      source install/setup.bash
      ```
@@ -200,28 +232,88 @@ The robot identifies items using AprilTags, detects missing or unknown items, an
 
 ## Usage
 
-1. **Modify Robot Files**
+1. **Mapping**
+ - On the Robot:
+ - Launch the TurtleBot3 bringup:
 
    ```bash
-    cd ~/ros2_ws/src
-    ros2 pkg create --build-type ament_python camera_pub --dependencies rclpy sensor_msgs
-    cd camera_pub/camera_pub
-    touch camera_pub.py
-    chmod +x camera_pub.py
+   ros2 launch turtlebot3_bringup robot.launch.py
+   ```
+ - On the Laptop  
+ - Launch Cartographer (SLAM):
+   
+   ```bash
+   ros2 launch turtlebot3_cartographer cartographer.launch.py use_sim_time:=false
+   ```
+
+ - Control the Robot via Keyboard: In a new terminal:
+   
+   ```bash
+   ros2 run turtlebot3_teleop teleop_keyboard
+   ```
+ - Start Mapping: Use the arrow keys to move the robot around and build the map.
+
+   ![Mapping Result](other_files/IROBOT_Images/mapping.png)
+  
+ - Save the Map Once Done: Once you're satisfied with the generated map:
+
+   ```bash
+   ros2 run nav2_map_server map_saver_cli -f ~/ros2_ws/src/irobot/maps/custom_map_name
+   ```
+
+> **Note:** This will create a map.pgm and map.yaml in ~/ros2_ws/src/irobot/custom_map_name.
+   
+
+
+2. **Waypoints**
+ - On the Laptop
+ - Open your ROS 2 workspace in VS Code:
+ - Locate the map loading section in your custom launch file (slam_navigation.launch.py) under the irobot package:
+ - Replace the map.yaml with the name of your custom map file if you've saved it with a different name (warehouse_map.yaml).
+   
+ ![Chnage Map](other_files/IROBOT_Images/change_map.png)
+
+ - build and source
+
+    ```bash
+    colcon build
+    source install/setup.bash
     ```
- - after creating the camera_pub.py file copy the contnets from this repo modified files/camera_pub.py into the camera_pub.py in 
- ~/ros2_ws/src/camera_pub/camera_pub
- - edit the bringupfile in ~/ros2_ws/src/turtlebot3/turtlebot3_bringup/launch after that replace the robot.py file with the file contnets from this repo   
- modified files/camera_pub.py  
- - build and source and check if the camera node works as intended
+ - Start your custom launch file (which loads the map and brings up the Nav2 stack):
 
-2. **Mapping**
- - open cartographer.launch.py on one terminal 
- - open ros2 run turtlebot3_teleop twist_keyboard in another terminal
- - you should be able to see  
+    ```bash
+    ros2 launch irobot slam_navigation.launch.py
+    ```
+ - In RViz, use the 2D Nav Goal tool to navigate the robot to different locations.
+ - Mark each location as a waypoint.
+   
+ ![Marking Waypoints](other_files/IROBOT_Images/waypoints.png)
 
+ - Open a new terminal tab, source the workspace, and echo the /waypoints topic:
+ - Note down the x and y coordinates for each waypoint. You’ll use these later for navigating through waypoints.
+ 
+    ```bash
+    source ~/ros2_ws/install/setup.bash
+    ros2 topic echo /waypoints
+    ```
+ ![Wayoints Topic](other_files/IROBOT_Images/waypoints_topic.png)
+ 
 
+3.**Start Inventory Management Process**
+ - On the Robot:
+ - Launch the TurtleBot3 bringup:
 
+   ```bash
+   ros2 launch turtlebot3_bringup robot.launch.py
+   ```
+ - On the Laptop
+  
+ - to launch the web interface  
+ - run the reciver on new terimal python3 ~/IRobot/src/other_files/ python3 sender.py
+ - run the reciver on new terimal python3 ~/IRobot/src/other_files/ python3 reciever.py
+ 
+ - Open VS code and chnage the cordiantes in the 
+   
 
 
 
