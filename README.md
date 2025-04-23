@@ -1,4 +1,4 @@
-![image](https://github.com/user-attachments/assets/3b2de437-58c1-4660-871f-ba0cb5ad5a70)/# IROBOT
+# IROBOT
 
 *Empowering Robots for Seamless Inventory Management in Small to Medium Warehouses*
 
