@@ -55,9 +55,6 @@ The robot identifies items using AprilTags, detects missing or unknown items, an
 
 ## 📽️ Demo / How It Works
 
-<details>
-<summary>Click to expand</summary>
-
 ### 🔹 Test Case 1 – Identifying 9 Known Items
 [![Test Case 1](https://img.youtube.com/vi/vr4dMc1UE1U/0.jpg)](https://youtu.be/vr4dMc1UE1U?si=JOIPj0qWZc1x-HAi)
 
@@ -70,8 +67,6 @@ The robot identifies items using AprilTags, detects missing or unknown items, an
 - Detects shelf with mixed inventory (known, unknown, and missing items).
 - Robot receives command via the Taipy Web UI and moves to the target shelf.
 - Demonstrates full integration of navigation, detection, and web control.
-
-</details>
 
 ---
 
