@@ -1,6 +1,6 @@
-# IROBOT
-
 ![Intro](other_files/IROBOT_Images/intro.jpeg)
+
+# IROBOT
 
 *Empowering Robots for Seamless Inventory Management in Small to Medium Warehouses*
 
