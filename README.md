@@ -349,7 +349,7 @@ The robot identifies items using AprilTags, detects missing or unknown items, an
    
  - Modify the Number of Tags: Locate the for loop and change the loop count to generate the desired number of tags.
 
- ![Tag Settings]()
+ ![Tag Settings](other_files/IROBOT_Images/Sizes_and_Ammount.png)
    
  - Change Tag Size: Update the image dimensions.
  - To print AprilTags at an accurate physical size, you need to convert the dimensions from centimeters (cm) to pixels (px) based on the print resolution.
@@ -372,7 +372,7 @@ The robot identifies items using AprilTags, detects missing or unknown items, an
  
  -  The generated AprilTags will be saved in: ~/IRobot/src/other_files/generate_apriltags/generated_tags/size_1888px/
    
- ![Tag]()
+ ![Tag](other_files/IROBOT_Images/tag36h11_0_1888px.png)
 
 ---
 
@@ -381,23 +381,23 @@ The robot identifies items using AprilTags, detects missing or unknown items, an
    
  - Buttons: Manual control panel with buttons for navigating the robot to predefined points (BASE, P1–P9).
 
- ![Buttons]()
+ ![Buttons](other_files/IROBOT_Images/buttons.png)
 
  - Display_picture: Displays saved images from the database.
  
- ![Pictureag]()
+ ![Picture](other_files/IROBOT_Images/display_picture.png)
 
  - Menu – navigation menu used for switching between dashboard pages and views.
  
- ![Menu]()
+ ![Menu](other_files/IROBOT_Images/Menu.png)
 
  - Metric: Gauge to mesure how many inventories are done 
  
- ![Tag]()
+ ![Metric](other_files/IROBOT_Images/metric.png)
  
  - Tabular_data – Table that displays scanned inventory data including tag IDs, product info, and timestamps.
  
- ![Tag]()
+ ![Tabular](other_files/IROBOT_Images/tabular.png)
 
 ---
 
