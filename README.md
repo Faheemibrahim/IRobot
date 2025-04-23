@@ -26,13 +26,14 @@ Built with the tools and technologies:
 
 - [📌 Overview](#-overview)
 - [📽️ Demo / How It Works](#-Demo--How-It-Works)
+- [📽️ Demo / How It Works](#-demo--how-it-works)
 - [🚀 Getting Started](#-getting-started)
-  - [Prerequisites](#-prerequisites)
-  - [Installation](#-installation)
-  - [Conda Environment Setup](#-conda-environment-setup)
+  - [Prerequisites](#prerequisites)
+  - [Installation](#installation)
+  - [Conda Environment Setup](#conda-environment-setup)
   - [Usage](#usage)
   - [Testing](#testing)
-- [Additional](#Additional)
+- [📁 Additional](#Additional)
 - [🙏 Acknowledgments](#acknowledgments)
 
 ---
@@ -376,7 +377,7 @@ The robot identifies items using AprilTags, detects missing or unknown items, an
 
 ---
 
-### Additional
+### 📁 Additional
 1. The taipy_modules directory contains different modular components of the full web interface before it was integrated into the final receiver.py application. These modules represent standalone UI elements used for development, testing, and individual experimentation.
    
  - Buttons: Manual control panel with buttons for navigating the robot to predefined points (BASE, P1–P9).
