@@ -1,4 +1,4 @@
-/# IROBOT
+![image](https://github.com/user-attachments/assets/3b2de437-58c1-4660-871f-ba0cb5ad5a70)/# IROBOT
 
 *Empowering Robots for Seamless Inventory Management in Small to Medium Warehouses*
 
@@ -32,8 +32,7 @@ Built with the tools and technologies:
   - [Conda Environment Setup](#-conda-environment-setup)
   - [Usage](#usage)
   - [Testing](#testing)
-- [📁 Folder Structure](#folder-structure)
-- [🔮 Future Work](#future-work)
+- [Additional](#Additional)
 - [🙏 Acknowledgments](#acknowledgments)
 
 ---
@@ -308,13 +307,102 @@ The robot identifies items using AprilTags, detects missing or unknown items, an
    ```
  - On the Laptop
   
- - to launch the web interface  
- - run the reciver on new terimal python3 ~/IRobot/src/other_files/ python3 sender.py
- - run the reciver on new terimal python3 ~/IRobot/src/other_files/ python3 reciever.py
- 
- - Open VS code and chnage the cordiantes in the 
-   
+ - Launch the Web Interface
+ - In separate terminals, run the sender and receiver scripts:
 
+   ```bash
+   # Terminal 1
+   python3 ~/IRobot/src/other_files/sender.py
+
+   # Terminal 2
+   python3 ~/IRobot/src/other_files/receiver.py
+   ```
+ 
+ - Open VS Code and edit the waypoints dictionary to set the correct (x, y) values for your warehouse shelves:
+ ![Wayoints Topic](other_files/IROBOT_Images/Chnage_Cordinates.png)
+
+ - build and source
+
+    ```bash
+    colcon build
+    source install/setup.bash
+    ```
+    
+- Start Nav2 Server:
+
+    ```bash
+    ros2 launch irobot slam_navigation.launch.py
+    ```
+  
+- Start Inventory Scanning
+
+    ```bash
+    ros2 launch irobot inventory_scan.launch.py
+    ```
+4. **Build Custom AprilTag**
+ 
+ - Open the AprilTag generator source file in VS Code:
+
+    ```bash
+    code ~/IRobot/src/other_files/generate_apriltags/Generate36h11.java
+    ```
+   
+ - Modify the Number of Tags: Locate the for loop and change the loop count to generate the desired number of tags.
+
+ ![Tag Settings]()
+   
+ - Change Tag Size: Update the image dimensions.
+ - To print AprilTags at an accurate physical size, you need to convert the dimensions from centimeters (cm) to pixels (px) based on the print resolution.
+
+   ```bash
+   Pixels = (cm / 2.54) × DPI
+   Pixels = (cm / 2.54) × 300
+   int imageSize = 945;  // 8 cm at 300 DPI
+   ```
+ - Compile and Build to Generate Tags
+   
+   ```bash
+   # Compile all Java files and output to the 'build/' directory
+   javac -d build/ $(find src -name "*.java")
+
+   # Run the AprilTag generator
+   java -cp build/ april.tag.Generate36h11
+   ```
+  
+ 
+ -  The generated AprilTags will be saved in: ~/IRobot/src/other_files/generate_apriltags/generated_tags/size_1888px/
+   
+ ![Tag]()
+
+---
+
+### Additional
+1. The taipy_modules directory contains different modular components of the full web interface before it was integrated into the final receiver.py application. These modules represent standalone UI elements used for development, testing, and individual experimentation.
+   
+ - Buttons: Manual control panel with buttons for navigating the robot to predefined points (BASE, P1–P9).
+
+ ![Buttons]()
+
+ - Display_picture: Displays saved images from the database.
+ 
+ ![Pictureag]()
+
+ - Menu – navigation menu used for switching between dashboard pages and views.
+ 
+ ![Menu]()
+
+ - Metric: Gauge to mesure how many inventories are done 
+ 
+ ![Tag]()
+ 
+ - Tabular_data – Table that displays scanned inventory data including tag IDs, product info, and timestamps.
+ 
+ ![Tag]()
+
+---
+
+### 🙏 Acknowledgments
 
 
 ---
+
