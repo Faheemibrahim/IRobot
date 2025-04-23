@@ -1,5 +1,7 @@
 # IROBOT
 
+![Intro](other_files/IROBOT_Images/intro.jpeg)
+
 *Empowering Robots for Seamless Inventory Management in Small to Medium Warehouses*
 
 ![Last Commit](https://img.shields.io/github/last-commit/Faheemibrahim/IRobot)
